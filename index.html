@@ -1,0 +1,641 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", "Noto Sans TC", "PingFang TC", "Apple LiGothic Medium", Roboto, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+            background-color: #4d400f;
+        }
+
+        header>span {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2.25;
+        }
+
+        header>h1 {
+            margin-top: 11px;
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.32;
+        }
+
+        header>table {
+            width: 100%;
+        }
+
+        header,
+        article>header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto
+        }
+
+        article {
+            color: #2d2d2d;
+        }
+
+        article>header>span {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2.25;
+        }
+
+        article>p,
+        article>h2,
+        article>blockquote,
+        article>ul,
+        article figcaption,
+        article>div,
+        article>header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto;
+        }
+
+        article>p,
+        article>blockquote {
+            font-size: 18px;
+            line-height: 2.0;
+            letter-spacing: 0.9px;
+            margin-top: 40px;
+        }
+
+        article>blockquote {
+            padding-left: 21px;
+            color: #6d6d6d;
+            border-left: 1px solid #6d6d6d;
+        }
+
+
+        article figcaption {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.8px;
+            color: #6d6d6d;
+            margin-top: 15px;
+        }
+
+        article>h2 {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1.1px;
+            line-height: 1.64;
+            margin-top: 40px;
+        }
+
+
+
+        @media screen and (min-width:1024px) {
+            header {
+                width: 900px;
+            }
+            article,
+            article>header {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+
+        }
+
+
+
+        @media screen and (min-width:768px) and (max-width:1023px) {
+            header {
+                width: 678px
+            }
+
+            article,
+            article>header {
+                max-width: 678px;
+                margin: 0 auto;
+            }
+        }
+
+        .authors {
+            margin-right: 30px;
+            font-size: 15px;
+            line-height: 2.25;
+        }
+
+        a {
+            color: #2d2d2d;
+            text-decoration: none;
+            border-bottom: 1px solid #c71b0a;
+        }
+
+        a:hover {
+            color: #c71b0a;
+        }
+
+        article>figure {
+            margin: 0;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>figure {
+                width: 678px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>figure {
+                width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .float-right {
+                float: right;
+                width: 360px;
+                margin-top: 40px;
+                margin-left: 40px;
+                margin-bottom: 50px;
+            }
+        }
+
+        .chart01 {
+            position: relative;
+            padding-bottom: calc(380/700*100%);
+        }
+
+        .chart02 {
+            position: relative;
+            padding-bottom: calc(1360/852*100%);
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", "Noto Sans TC", "PingFang TC", "Apple LiGothic Medium", Roboto, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+            background-color: #F1F1F1;
+        }
+
+        article>ul {
+            list-style-type: none;
+            padding-left: 0;
+            width: 100%;
+        }
+
+
+        footer {
+            background-color: #bfbfbf;
+        }
+
+        footer>table {
+            border-spacing: 45px;
+            width: 100%;
+        }
+
+        .header {
+            margin-top: 17px;
+            margin-bottom: 17px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 25px;
+            background-color: #e1e1e1
+        }
+
+        .menu {
+            width: 22px;
+            height: 22px;
+            background-color: #e1e1e1;
+        }
+
+        .introduction {
+            font-size: 22px;
+            line-height: 1.82;
+            letter-spacing: 1.6px;
+            text-align: justify;
+            margin-top: 30px;
+        }
+
+        .related-text {
+            font-size: 16px;
+            line-height: 2.25;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .related-items {
+            margin-bottom: 60px;
+        }
+
+        .related-item {
+            background-color: #e1e1e1;
+            margin-top: 20px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .related-item>img {
+            width: 20%;
+            vertical-align: middle;
+        }
+
+        .related-item>div {
+            display: inline-block;
+            width: 70%;
+            padding-left: 20px;
+            vertical-align: middle;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #bfbfbf;
+            min-height: 300px;
+        }
+
+        footer>table {
+            border-spacing: 45px;
+            width: 100%;
+        }
+
+        .footer-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #777;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            font-size: 18px;
+            text-align: center;
+            color: #777;
+        }
+
+        .flex-footer {
+            display: flex;
+            justify-content: space-around;
+            max-width: 529px;
+            margin: 0 auto;
+            padding-top: 65px;
+            flex-wrap: wrap
+        }
+
+        .flex-footer>div {
+            min-width: 114px;
+            margin-bottom: 48px
+        }
+
+        @media screen and (max-width:768px) {
+            .flex-footer {
+                width: 228px;
+            }
+        }
+
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div,
+            article>header,
+            article>ul {
+                width: 550px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div,
+            article>header {
+                max-width: 756px;
+            }
+            article>ul {
+                width: 700px;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            .header-logobox {
+                padding-bottom: 45%; 
+                position: relative; 
+                margin-bottom:55 px;
+            }
+           .liver-logo {
+                position: absolute; 
+                left: 32%;
+                width: 35%;
+                }  
+            .line {
+                position: absolute; 
+                left: 0%;
+                top: 95%; 
+                width: 100%; 
+                height: 1%
+                } 
+            .law {
+                position: absolute; 
+                left: 15%;
+                top: 96%; 
+                width: 18%;
+                 }
+            .economics{
+                position: absolute; 
+                left: 40.5%;
+                top: 96%; 
+                width: 18%;
+                 }
+            .education{
+                position: absolute; 
+                left: 65.5%;
+                top: 96%; 
+                width: 18%;
+                 }
+            .fb {
+                position: absolute; 
+                right: 8%;
+                top: 7%; 
+                width: 6%;
+                
+                } 
+            .ig {
+                position: absolute; 
+                right: 0%;
+                top: 7%; 
+                width: 6%;
+                }
+            
+           
+        }
+
+
+        @media screen and (min-width: 768px) {
+           .header-logobox {
+                padding-bottom: 20%; 
+                position: relative; 
+            }
+           .liver-logo {
+                position: absolute; 
+                left:0;
+                width: 20% } 
+           .line {
+                position: absolute; 
+                right: 0%;
+                top: 35%; 
+                width: 75%;
+                height: 1% } 
+            .law {
+                position: absolute; 
+                left: 35%;
+                top: 36%; 
+                width: 15%;
+                 } 
+            .economics{
+                position: absolute; 
+                left: 55%;
+                top: 36%; 
+                width: 15%;
+            }
+            .education{
+                position: absolute; 
+                left: 75%;
+                top: 36%; 
+                width: 15%;
+            }
+            .fb {
+                position: absolute; 
+                right: 4%;
+                top: 2%; 
+                width: 3%;
+                } 
+            .ig {
+                position: absolute; 
+                right: 0%;
+                top: 2%; 
+                width: 3%;
+                }
+           
+        }
+
+
+    
+    </style>
+        
+        
+</head>
+<!--
+ .related-item>div:first-child {
+            display: table-cell;
+            width: 80px;
+            height: 80px;
+            background-color: papayawhip;
+        }
+
+
+        .related-item>div:last-child {
+            display: table-cell;
+            padding-left: 20px;
+            vertical-align: middle;
+        }
+-->
+
+<body style="font-family: Microsoft JhengHei, " Noto Sans TC ", "PingFang TC ", "Apple LiGothic Medium ", Roboto, "Lucida
+    Grande ", "Lucida Sans Unicode ", sans-serif;
+background-color: #f9f6ea">
+
+    <header>
+        <div class="header-logobox" style="margin-bottom: 70px">
+             <figure>
+                <img src="logo.png" alt="logo" class="liver-logo">
+                <img src="分隔線.png" alt="line" class="line">
+                <a href="https://www.facebook.com/officialshawnyue/" target="_blank"><img src="司法人權.png" alt="law" class="law"></a>
+                <a href="https://www.facebook.com/officialshawnyue/" target="_blank"><img src="產業經濟.png" alt="economics" class="economics"></a>
+                <a href="https://www.facebook.com/officialshawnyue/" target="_blank"><img src="教育文化.png" alt="education" class="education"></a>
+                <a href="https://www.facebook.com/officialshawnyue/" target="_blank"><img src="fb.png" alt="fb" class="fb"></a>
+                <a href="https://www.instagram.com/lok666/?hl=zh-tw" target="_blank"><img src="ig.png" alt="ig" class="ig"></a>
+            </figure>
+        </div>
+    </header>
+    <article>
+        <!-- 大標 -->
+        <header>
+            <h1 style="margin-top: 30px">社群行銷難長久　弱勢街賣者的下一站在哪裡？
+            </h1>
+        </header>
+        <!-- 記者日期 -->
+        <div style="margin-bottom:0px">
+            <span class="authors">
+                <b>專題記者／
+                    <a href="https://www.facebook.com/profile.php?id=100003653177937" target="_blank">陳潔慧</a>
+                    <a href="https://www.facebook.com/paula.liao.5" target="_blank">廖翊庭</a>
+
+                    <a href="https://www.facebook.com/joy2bitme" target="_blank">梁嘉容</a>
+
+                    <a href="https://www.facebook.com/PopoHsu851204" target="_blank">徐安萱</a>
+                </b>
+            </span>
+        </div>
+        <div><b style="margin-bottom:15px; color:#777; font-size: 15px">2018.04.18 </b>
+       </div>
+
+        <!-- 首圖 -->
+        <figure style="margin-top: 20px; width: 100% ">
+            <img src="love1.jpg" alt="首圖" width="100%" />
+        </figure>
+
+        <!-- 導言 -->
+        <p class="introduction">
+            常有熱心網友在社群媒體分享弱勢街賣者的消息，進而吸引媒體報導，引發大批民眾「用新台幣讓他早點回家」的善舉。爆紅期間，弱勢族群的生計暫時能獲得改善。然而風潮過後，不單依賴同情心，他們能否找到維持長遠穩定生計的出口？
+        </p>
+        
+        <!--第一段 -->
+        <h2 class="title">弱勢攤販爆紅不盡然帶來好處</h2>
+        <p style="margin-top:20px">「最幸福的事就是開心活著還有工作可以做。」台中有位75歲的沈姓阿嬤多年來在街頭努力賣著新台幣10元紅豆餅、茶葉蛋，每天為了房租、生活費，甚至罹病兒子的沈重醫藥費而努力工作著，卻只能一個一個銅板慢慢湊。生意慘澹時，晚上還得出門撿資源回收，加減補貼家用，但她臉上總是掛著淺淺的微笑、從來不喊苦。</p>
+        <p>紅豆餅阿嬤的故事透過Facebook「光線」粉絲專頁的宣傳，瀏覽、轉貼人次高達數十萬，也吸引媒體報導。由於不少善心民眾的支持，讓沈阿嬤的經濟狀況暫時得到緩解。然而光線創辦人楊大哥（化名）表示，紅豆餅攤的爆紅卻招來「正義魔人」檢舉，因此沈阿嬤已經無法在原本的地點擺攤販賣。</p>
+        <p>其實許多弱勢攤販不願意被曝光宣傳，便是因樹大招風可能會遭惡意檢舉，甚至有幫派分子強收保護費的狀況。爆紅後突如其來的大量收入，更可能讓弱勢商家原有的社會救助資格遭到撤銷，因此商家還請民代或是慈善機構幫忙設立專款帳戶。</p>
+        <p>根據民國107年《社會救助法》低收入戶資格審核標準，存款限額為75000元，楊大哥提到，前陣子爆紅的<a href="https://news.tvbs.com.tw/life/841715" target="_blank">台南小妹妹兩元水餃</a>，大量的訂購款匯進自家帳戶，被取消低收入戶資格的可能很高，即便熱潮過後再陷經濟困難，也難以再次申請到補助，無疑是雪上加霜。</p>
+
+        <!--第二段 -->
+        <h2 class="title">熱潮減退　生活再陷困境</h2>
+        <p style="margin-top:20px">由於現今社群媒體用戶的普及，光線粉絲團希望透過網路故事行銷幫助弱勢商家增加曝光度，而感人、勵志的故事往往也引起網友的熱議，許多人留下「用新台幣讓他早點回家」的標語，前往商家朝聖。短時間內流入大量資金，的確讓弱勢商家的經濟困境得到短暫的改善，但楊大哥表示熱潮僅能持續一、兩週，要有長期且穩定的客源是弱勢商家共同的難題。</p>
+        <p>雖然政府設立《社會救助法》幫助弱勢族群能溫飽度日，但因規定相當嚴峻，許多弱勢被拒之於門外。就算生活再困頓，但只要任何家庭成員名下有不動產，即便只是一棟勉強能遮風避雨的破房子，全家都無法取得中低或低收入戶的資格，這些處於社會灰色地帶的人們就是「邊緣戶」。</p>
+        <p>邊緣戶多以街頭擺攤維生，但政府沒有提供一個合法、不會被開單檢舉的場所，讓他們能安心謀生。台中市近幾年更為維護街道整潔及美觀，嚴加執行「清除道路障礙專案」，楊大哥也痛批：「清道專案，清的就是這些社會底層。」許多在街頭擺攤的弱勢商家難以求生存，輕則遭驅離，重則必須繳交高過他們一天收入的罰單。</p>
+        <p>「消費者購買商品是出自於自願，何來斂財之說？」面對網路討論中有不少人認為弱勢商家的商品品質與售價不成正比，彷彿是「用愛心斂財」，楊大哥認為，這種論調根本是觀念偏差。</p>
+        <p>楊大哥以販賣口香糖、海苔與刮刮樂的身障街賣者阿燦為例。腦性麻痺的阿燦手腳不方便、無法正常言語表達，只能喃喃唸著不清楚的：「來買口香糖。」他不知道如何向上游廠商批貨，因此只能到量販店批貨。楊大哥嘆道：「我知道阿燦賣得比較貴，但他不是故意的，他只會到全聯批貨，成本就這麼高，他能怎麼辦？」</p> 
+        <p>在光線粉絲專頁中，也有熱心網友建議，弱勢商家能否販售更具吸引力、需求性、流行文創小物等，以維持長遠的收入。然而楊大哥表示，除了要考量阿公阿嬤、身障攤販能否搬運商品，更重要的是許多弱勢商家缺乏批貨管道，也無廠商、贊助商願意做愛心幫助他們。</p>
+        
+         <!--第三段 -->
+         <h2 class="title">曾想成為社會企業標竿　角落微光不敵現實</h2>
+         <p style="margin-top:20px; margin-bottom: 40px">14日下午三點，陽光溫暖地灑進台中舊火車站側門，一群人或坐或站，等著某個人出現。忽然從遠處慢慢走來一位老奶奶，戴著格紋帽、穿紫背心，瘦小的身軀拖著黑色、看似上了年紀的行李箱 ，上面掛著「隱者地圖」的旗幟—— 她是小梅姐，角落微光的其中一位隱者（隱者指無家者或獨居老人）。</p>
+         <figure style="width: 100% ">
+            <img src="love1.jpg" alt="角落微光小梅姐" width="100%">
+            <figcaption>小梅姐是角落微光中「隱者地圖」的導覽員。隱者地圖致力於做出市場區別且有溫度的導覽，希望透過無家者的視角，讓都市人看見不一樣的城市景色。圖／梁嘉容　攝</figcaption>
+        </figure>
+        <p style="margin-top: 40px">簡單打過招呼後，小梅姐發給大家導覽機，開始介紹她從小生活到大的火車站。小梅姐用她微弱的力氣，輕柔地說出記憶裡有關於中區的一切。聽著她不時發出慈祥的笑聲，你很難想像小梅姐曾經是個害羞、不擅於與人聊天互動的獨居老人。幾年前父母過世後，讓她陷入更深的孤獨與悲傷中。「那時候生病躺在床上，我就想說『啊乾脆跟爸爸媽媽一起走好了』。」幸好遇見社福團體與社會企業，小梅姐漸漸敞開心房；擔任隱者導覽員，也讓她找到新的生活動力。</p>
+        <p>社會企業角落微光主要推動隱者地圖計畫，培訓有工作意願的無家者、獨居老人或是單親媽媽擔任中區導覽員，導覽門票六成為導覽員的收入，四成為社會企業營收。隱者地圖導覽過程中，導覽員不單純介紹文史，更會向民眾陳述自己的生命故事，講解自己在這個地方從年輕到老的記憶，他們致力創造市場區隔，提供有溫度的導覽。</p>
+        <p>「收入最好時，導覽員一個月可以賺二到三萬，但最差時大概一萬。」角落微光計畫專員劉曜寬表示，隱者地圖剛運作時，因媒體曝光而爆紅，報名人數眾多，但熱潮減退後，團數越來越少。賣票狀況時好時壞，團數相當不穩定，甚至有時報名人數未滿三人，而必須面臨停辦。角落微光也想過規劃更多導覽路線，創造新的市場需求，然而要培訓五、六十歲的導覽員大哥大姐們走新的路線、記新的文史介紹其實相當困難，不只考驗他們的記憶力，更是體力上的負擔。</p>
+        <p>政府為推動文史導覽風潮，定期提供免費導覽服務，劉曜寬表示，這樣嚴重壓縮角落微光客群，且參與導覽的民眾目的都不同，有些人只想聽免費導覽、有吃又有拿；這樣的消費習慣養成後，便會對導覽產業造成傷害。而在市面上，也有更多便宜、主打套裝行程的導覽，「當你的商品無法與全營利組織競爭，就是比較吃虧。」</p>
+        <p>在追求高CP值的社會風潮下，企業利用雄厚資金，大量製造商品以壓低成本，使消費者趨之若鶩；而無本的社會企業、公益團體則必須付出高成本以產製商品，長期下來難以刺激消費者重複購買，因此消費族群只會慢慢耗損，漸漸的便無法長期經營下去。</p>
+        <p>由於導覽收入不穩定，角落微光為了拓展市場需求，多角化經營讓大哥大姐在街頭販賣甜甜圈、手工筆記本；以及「小書」，讓無家者剪貼製作、寫自己的故事。「我們一直在思考顧客想看的內容是什麼？」但劉曜寬也表示，民眾購買小書通常不是為了內容，而是想幫助大哥大姐，因此本來規劃每月出刊的小書，僅出三期便無疾而終。角落微光一直想打造一支強力且具有市場區隔的產品，但礙於人力資源、經費缺乏無法達成理想。</p>
+        <p>劉曜寬嘆著氣說到，缺乏人力資源、經費，又無法推出一個強力的商品，經營三年多的角落微光終究不敵現實，將於本月底收攤。他認為，行銷能力弱、找不到目標客群是許多非營利組織的通病。「賣太貴沒有人買也是問題，或是只是為了同情心、愛心而購買，可能一次兩次人家就不買帳了。」即使是做愛心也須考量市場機制，品質不佳、缺乏需求的商品也難以長久支持。</p>
+       
+        <!-- 第四段 -->
+        <h2 class="title">角落微光只是中繼站　而非終點</h2>
+        <p style="margin-top:20px">角落微光提供無家者輔導、給予工作機會，即使公司停擺了，劉曜寬說：「角落微光只是無家者的中繼站，而非終點站。」他表示，培訓期間有個大哥通過考試、激起信心，之後大哥又再考取導遊執照，有更好的工作，就沒來當導覽員了。長期陪伴、看見無家者的努力與轉變，是劉曜寬對角落微光最捨不得的。</p>
+        <p>角落微光推動隱者地圖、街賣計畫，必須與人群溝通，相當考驗他們的人格特質，起初大哥大姐因為愛面子、害羞而不敢招呼客人，在經過角落微光員工們的協助與關心後，曾擔任導覽的高大哥現在已經能落落大方的面對人群。角落微光不只希望能提供無街者工作機會，更希望能夠以家人的方式陪伴在他們身邊，讓他們不再感受到孤單。</p>
+        
+        <!-- 第五段 -->
+        <h2 class="title">過一天是一天　熊米屋、新巨輪著眼當下盼扭轉偏見</h2>
+        <p style="margin-top:20px">「大哥哥、大姊姊，愛心手工餅乾，一包五十元，請大家幫幫忙！」這樣的叫賣並不陌生，而這些熱情招呼聲的主人，是熊米屋烘焙坊的「小愉兒」。「熊米屋」取台語「想要有」的諧音，代表「小愉兒想要有個家」。</p>
+        <p>走進位於基隆巷弄裡的熊米屋工廠，小愉兒大聲喊著：「你好！」，興奮地開始自我介紹。財團法人小愉兒社會福利基金會執行董事趙又琳微笑著說到，每天看著烘焙坊心智障礙孩子天真愉快的模樣，便為他們取了個暱稱「小愉兒」，期許他們每天都能開開心心。</p>
+        <p>「這十年來我們只做一件事，讓孩子變成大家的朋友。」趙又琳說道，熊米屋用最好的原料烘焙餅乾，為的是當小愉兒親手將優良的產品交予消費者時，既能讓消費者品嘗美味的餅乾，態度由同情轉為信任，也讓小愉兒更自信、開心。透過反覆練習烘焙、裝袋、出門販售，熟練之後成為技能，終能靠自己的能力，為小愉兒的家再添上一塊堅固的磚瓦。</p>
+        <p>若單純給予幫助，心障人士的生活能力將會退化進而失去生活自主性，更會加重照顧者的負擔。而熊米屋利用動手做餅乾，刺激小愉兒發展認知、生活能力、融入社會。「若他只有兩成的天賦，就應該給他八成的協助。」趙又琳呼籲，從現在開始，買一包餅乾、給他們一句問候，都能夠幫助心障人士維持身體及工作能力，進而延後進入安置機構的時間。</p>
+        <p>依據《身心障礙者權益保障法》規定，政府會依照殘障程度與家庭狀況提供教養費，若是一個月平均補助一位小愉兒一萬元，從二十歲開始申請補助，五十年總共要花費六百萬元。趙又琳表示，若依照現行法律，將心障孩子交由機構安置、照顧，其實是全國人民的納稅錢承擔費用，「其實幫助小愉兒，也是在幫助自己。」</p>
+        <p style="margin-bottom: 40px">另一處位於新北市板橋區的鐵皮工廠，沒有了稚嫩的氣息，是社團法人台灣新巨輪服務協會。新巨輪服務協會理事長陳安宗本身是小兒麻痺患者，雙腳雖可以行走但仍需要輪椅作為代步工具。他在經歷工作失敗之後，看見社會對輪椅族群的不理解以及不友善的工作環境，因此決定起身為身障、輪椅人士創造更好的工作及生活環境。</p>
+        <figure style="width: 100% ">
+            <img src="love3.jpg" alt="新巨輪阿國" width="100%">
+            <figcaption>阿國（化名）是巨輪的街賣者。與大眾認為的可憐形象不同，他在街上總是帶著燦爛的笑容，面對熙來攘往的過路者。圖／陳潔慧　攝</figcaption>
+        </figure>
+        <p style="margin-top: 40px">在街上，不難看見身穿藍色協會背心、坐在輪椅上的街賣者，一包包的衛生紙、口香糖，看似微小，卻是身障街賣者的經濟支柱。 街賣賺得的100元背後，街賣者能夠得到50元，而另外50元則支撐起看似冰冷、簡陋，卻能夠遮風避雨的「共生家園」，房租、水電、飲食全都包含在內。</p>
+        <p>曾經為無家者的他們，現在共有30位工作者共同居住。室友除了小兒麻痺、腦性麻痺患者，還有許多因工作傷害而截肢、失業的無家者、獨居者。陳安宗表示，協會成立的目的，是為了讓更多民眾理解，這一群不願意放棄生存機會的人們，在這裡為生活努力著。</p>
+        <p style="margin-bottom: 40px">「我們會依照身障者的身體、精神狀況及體力來安排工作時段。」陳安宗表示，街賣其實是人性化的工作，也不會給予工作壓力，只求安穩度過每一天。由於身心障礙人士工作、學習能力有限，難以獨力作業，須花費兩倍的人力成本。因此熊米屋、新巨輪沒有多餘的經費及心力，開發多元產品、拓展新技能，只能著眼當下、過一天是一天。</p>
+        <figure style="width: 100% ">
+            <img src="love5.jpg" alt="新巨輪街賣" width="100%">
+            <figcaption>街賣者一天花約八小時的時間在街頭街賣，卻常遭受路上人們冷漠的眼光，他們希望透過新巨輪的成立，讓眾人能更了解並關懷街賣者。圖／陳潔慧　攝</figcaption>
+        </figure>
+        <p style="margin-top: 40px">「不只給他釣竿，還要陪他走向河邊，陪他釣魚。」熊米屋與新巨輪的出發點單純且明確，希望透過街賣，扭轉社會對於身心障礙團體的誤解。弱勢族群不願被冠上販賣愛心的汙名，而是為了每天的溫飽努力謀生，擺脫消費同情心的偏見。</p>
+
+         <!-- 第六段 -->
+         <h2 class="title">胸懷「大誌」　求新求變求長遠經營</h2>
+         <p style="margin-top:20px">有別於熊米屋與新巨輪，《大誌雜誌》嘗試站在消費者立場，將民眾對於新事物的渴求納入經營方針，開發多元產品，發展出具長程規劃的營運模式。</p>
+         <p>對於年輕人來說，《大誌》絕對不是陌生的出版品。民國99年由大智文創取得英國《The Big Issue》授權、引進台灣發行中文版。在最初的萌芽階段，《大誌》藉由與社福單位合作，招募身心障礙人士以及無家者。經過販售技巧、人際互動的培訓，接力為期一週的實習後，便成為固定販售員。因此，在捷運站出口、大學校園周邊，便看見身穿橘色背心、手拿《大誌》的販售員。</p>
+         <p>最初開始進行販售時，《大誌》考量到販售員較無資本，因此會免費提供十本雜誌給予販售員販售；有了收入後，接下來販售員就以每本50元的成本價，向附近的《大誌》發行站批發雜誌，再以定價100元提供給購買民眾，賺取每本50元的收入。如果前一期刊物沒有賣完，販售員能再回到發行站、換成當期雜誌繼續販賣。</p>
+         <p style="margin-bottom: 40px">來到《大誌》的發行總部，不到十人的工作室中，牆上貼滿各期隨刊發行的海報，地上擺放著第九期的《週刊編集》。在場的夥伴都正低著頭專心工作。《大誌》主編黃銘彰說到，民眾常以施捨的角度去幫助弱勢族群，但對《大誌》來說並不如此，「是他們（販售員）自己努力賺錢的。」販售員一天約須花上二到十二小時不等的時間，在街頭兜售雜誌，常常必須在大太陽底下曝曬，又或是面對突如其來的大雨。</p>
+         <figure style="width: 100% ">
+            <img src="love6.jpg" alt="大誌雜誌" width="100%">
+            <figcaption>《大誌》招募街友為販售員，並將銷售收益與販售員五五分帳，希望透過提供工作機會，改變他們的生活。圖／梁嘉容　攝</figcaption>
+        </figure>
+        <p style="margin-top: 40px">黃銘彰表示，《大誌》將負責產製內容的編輯方，以及負責販賣通路的的販售員分開，由編輯同仁策畫每期雜誌內容，邀請聶永真操刀封面設計。「將雜誌的品質做好，才能吸引更多讀者。」他認為，如果能穩定雜誌銷量，長期下來，販售員的生計才可真正獲得改善。</p>
+        <p>除了生計上的問題，多數無家者因長期獨自在外漂泊，較少有與人攀談、交流的機會，因此在人際互動上比較容易遇到困難。因為不善於溝通，他們常在工作上碰壁、或與人發生摩擦，最終導致大眾的偏見，使他們在路上必須接受於民眾歧視的眼光，無家者漸漸失去信心，最終將自己隔絕於社會之外。</p>
+        <p>《大誌》提供了無家者一個已被樹立的品牌形象；接近販售員的民眾，多是因為曾聽過《大誌》、感到好奇而向前詢問，或是經由社群媒體宣傳決定購買。其實這些消費本意都是友善的，販售員經過長期與社會的良性互動，不但能消除民眾對無家者的刻板印象，更能幫助重拾信心與生活尊嚴。</p>
+        
+        <!-- 第七段 -->
+        <h2 class="title">故事行銷轉化為長效性的經濟支持</h2>
+        <p style="margin-top:20px">面對弱勢團體街賣者可能遇到的障礙，社會企業「點點善」與「人生百味」、新巨輪協會合作，提出「天賦城市計畫」。點點善召集人葉文宏認為，街賣者最常碰到資訊不對等、形象不親民、商品沒優勢三種困境。因此，點點善希望透過職能訓練、改造輪椅及街賣車外觀，轉換街賣者形象，讓他們成為城市街頭的補給站；而身障人士、單親媽媽、弱勢家庭小孩，都會是計畫的目標對象。葉文宏希望，民眾在看到全新外觀的街賣車後，不以同情、可憐的心態面對，取而代之的是，充滿快樂的接近這些城市裡的小精靈。</p>
+        <p>公益組織與社會企業在推動計劃時，往往會遇到經濟、人力上的限制。葉文宏就提到，點點善會透過企業間圖像授權、對消費者進行商品銷售以及策展收入等，來維持經濟收入，「當商業模式運作起來後，自然就有相對應的資源去從事公益計畫。」劉曜寬也認為，企業在能力所及範圍內，本就應該善盡社會責任。以角落微光為例，他也希望，未來如果有企業願意接手，可以投入更多人員、資金；一旦資源到位，也就能開拓新的服務與商品，延續角落微光幫助無家者的精神。</p>
+        <p>從角落微光、熊米屋、新巨輪到《大誌》，他們都提出了共同的訴求：「給他魚，不如給他釣竿。」不接受捐款，重視在相對弱勢族群的能力範圍內，製作餅乾、街頭導覽、販售雜誌，來長期提供自身生活經濟所需。以愛心與故事作為基本號召，並非不可行，反而是與市場其他商品做出區隔，不過單單倚靠出資者或是消費者的善心，其實無法轉化為長效的經濟支持。回歸產品本身質量、多元化，建構完整的組織營運模式，不僅不浪費愛心、也給予弱勢族群尊嚴，方能細水長流。</p>
+
+
+        <div class="related-text">延伸閱讀</div>
+        <ul class="related-items">
+            <a href="https://wenrongchang.github.io/Crazy-all-nighter/104405016/teacher02.html" target="_blank">
+                <li class="related-item">
+                    <img src="chart03.jpg" alt="leading image of this article">
+                    <div>【當老師不再是鐵飯碗 2】代理教師陷重重困境　燃燒熱忱何以為繼</div>
+                </li>
+            </a>
+            <a href="http://www.unews.nccu.edu.tw/unews/%E4%BB%A3%E7%90%86%E6%95%99%E5%B8%AB%E6%96%B03/" target="_blank">
+                <li class="related-item">
+                    <img src="photo02.JPG" alt="leading image of this article" />
+                    <div>【當老師不再是鐵飯碗 3】提升代理教師待遇　保障學生受教權</div>
+                </li>
+            </a>
+        </ul>
+    </article>
+
+    <footer>
+      
+      <div class="flex-footer">
+            <div>
+                <div class="footer-circle"></div>
+                <div class="footer-text">關於我們</div>
+            </div>
+            <div>
+                <div class="footer-circle"></div>
+                <div class="footer-text">聯絡我們</div>
+            </div>
+            <div>
+                <div class="footer-circle"></div>
+                <div class="footer-text">關於我們</div>
+            </div>
+            <div>
+                <div class="footer-circle"></div>
+                <div class="footer-text">聯絡我們</div>
+            </div>
+        </div>
+   
+    </footer>
+
+
+
+</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121184139-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-121184139-1');
+</script>
+<!-- Hotjar Tracking Code for https://wenrongchang.github.io/Crazy-all-nighter/1 -->
+<script>
+    (function (h, o, t, j, a, r) {
+        h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+        h._hjSettings = { hjid: 923854, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script'); r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
+
+</html>
