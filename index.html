@@ -183,16 +183,6 @@
             width: 100%;
         }
 
-
-        footer {
-            background-color: #bfbfbf;
-        }
-
-        footer>table {
-            border-spacing: 45px;
-            width: 100%;
-        }
-
         .header {
             margin-top: 17px;
             margin-bottom: 17px;
@@ -375,8 +365,127 @@
                 width: 3%;
                 }
 }
+@media screen and (max-width: 768px) {
+            .computer {
+                display: none
+            }
+            .footer-bg {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+            }
+            .about-us {
+                position: absolute;
+                left:10%;
+                top: 10%;
+                width: 40%;
+                color: rgba(255, 255, 255, 0.924);
+                font-size: 20px
+            }
 
+            .about-us-word {
+                position: absolute;
+                left: 10%;
+                top: 18%;
+                width: 75%;
+                color: rgba(255, 255, 255, 0.924);
+                line-height: 20px;
+                font-size: 12px;
+                max-width: 100%;
+            }
+            .contact-us {
+                position: absolute;
+                left: 10%;
+                top: 52%;
+                width: 40%;
+                color: rgba(255, 255, 255, 0.924);
+                font-size: 20px;
+            }
 
+            .contact-us-word {
+                position: absolute;
+                left: 10%;
+                top: 62%;
+                width: 100%;
+                color: rgba(255, 255, 255, 0.924);
+                line-height:10px;
+                font-size: 12px;
+                max-width: 100%;
+            }
+
+            .click-to-know{
+                position: absolute;
+                left: 35%;
+                top: 8%;
+                width: 30%;
+                color: rgb(255, 104, 104);
+                line-height: 35px;
+                font-size: 12px;
+                max-width: 100%;
+
+            }
+            
+                }
+        @media screen and (min-width: 768px) {
+            .phone {
+                display: none
+            }
+            .footer-bg {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+            }
+            .about-us {
+                position: absolute;
+                left: 18%;
+                top: 28%;
+                width: 20%;
+                color: rgba(255, 255, 255, 0.924);
+                font-size: 30px;
+            }
+
+            .about-us-word {
+                position: absolute;
+                left: 18%;
+                top: 40%;
+                width: 30%;
+                color: rgba(255, 255, 255, 0.924);
+                line-height: 35px;
+                font-size: 18px;
+                max-width: 100%;
+            }
+            .contact-us {
+                position: absolute;
+                left: 56%;
+                top: 28%;
+                width: 20%;
+                color: rgba(255, 255, 255, 0.924);
+                font-size: 30px;
+            }
+
+            .contact-us-word {
+                position: absolute;
+                left: 56%;
+                top: 40%;
+                width: 36%;
+                color: rgba(255, 255, 255, 0.924);
+                line-height: 32px;
+                font-size: 18px;
+                max-width: 100%;
+            }
+
+            .click-to-know{
+                position: absolute;
+                left: 34%;
+                top: 28.8%;
+                width: 30%;
+                color: rgb(255, 104, 104);
+                line-height: 35px;
+                font-size: 16px;
+                max-width: 100%;
+
+            }
+    }
 
     
     </style>
@@ -545,32 +654,78 @@ background-color: #f9f6ea">
         </ul>
     </article>
 
-    <footer>
-      
-      <div class="flex-footer">
-            <div>
-                <div class="footer-circle"></div>
-                <div class="footer-text">關於我們</div>
-            </div>
-            <div>
-                <div class="footer-circle"></div>
-                <div class="footer-text">聯絡我們</div>
-            </div>
-            <div>
-                <div class="footer-circle"></div>
-                <div class="footer-text">關於我們</div>
-            </div>
-            <div>
-                <div class="footer-circle"></div>
-                <div class="footer-text">聯絡我們</div>
-            </div>
-        </div>
-   
-    </footer>
-
-
 
 </body>
+
+
+<footer style="font-family: Microsoft JhengHei,  Noto Sans TC , PingFang TC , Apple LiGothic Medium , Roboto, Lucida
+    Grande, Lucida Sans Unicode , sans-serif">
+        <figure class="footer-bg computer" width="100%; ">
+            <img src="電腦版footer.png" alt="footer" width="100%" />
+
+           <b class="about-us">
+                關於我們
+            </b>
+            <div class="about-us-word">
+                <p>
+                2018年6月《爆肝者》正式上線，稟持熬夜、不睡、等天亮的精神，為法賢努力當個披星戴月的小粉絲，共同畫下最美好的夏日篇章，我們愛老師！
+                </p>
+            </div>
+            <div  class="click-to-know">
+                <a href="https://joy2bitme.github.io/aboutus/index.html" target="_self" ><span style="padding-bottom:0.6px ; border-bottom-width: 1.5px ; 
+                    border-bottom-color: rgb(255, 104, 104) ; border-bottom-style : solid; color: rgb(255, 104, 104)">
+                    點我了解作者群
+                </span></a>
+                </div>
+            <b class="contact-us">
+                聯絡我們
+            </b>
+            <div class="contact-us-word">
+                <p>
+                    地址：台北市文山區指南路二段64號 大勇樓312編輯室
+                </p>
+                <p>
+                    電話：02-29387084
+                </p>
+                <p>
+                    信箱：uonline@nccu.edu.tw
+                    </p>
+            </div>
+        </figure>
+        <figure class="footer-bg phone"  width="100%;">
+            <img src="手機版footer.png" alt="footer" width="100%" />
+            <a href="https://joy2bitme.github.io/aboutus/index.html" target="_self" ><b class="about-us">
+            關於我們
+            </b></a>
+            <div class="about-us-word">
+                <p>
+                    2018年6月《爆肝者》正式上線，稟持熬夜、不睡、等天亮的精神，為法賢努力當個披星戴月的小粉絲，共同畫下最美好的夏日篇章，我們愛老師！
+                </p>
+            </div>
+            <div  class="click-to-know">
+                    <a href="https://joy2bitme.github.io/aboutus/index.html" target="_self" ><span style="padding-bottom:0.1px ; border-bottom-width: 1.5px ; 
+                        border-bottom-color: rgb(255, 104, 104) ; border-bottom-style : solid; color: rgb(255, 104, 104)">
+                        點我了解作者群
+                    </span></a>
+                    </div>
+            <b class="contact-us">
+                聯絡我們
+            </b>
+            <div class="contact-us-word">
+                <p>
+                    地址：台北市文山區指南路二段64號 大勇樓312編輯室
+                </p>
+                <p>
+                    電話：02-29387084
+                </p>
+                <p>
+                    信箱：uonline@nccu.edu.tw
+                    </p>
+            </div>
+        </figure>
+
+    </footer>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121184139-1"></script>
 <script>
